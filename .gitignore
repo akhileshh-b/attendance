@@ -1,0 +1,33 @@
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies #
+########################
+backend/node_modules/
+frontend/node_modules/
+
+# Environment files #
+#####################
+.env
+
+# Build artifacts #
+###################
+# (If you have any build directories in frontend, add them here)
+
+# IDE specific files #
+######################
+.idea/
+.vscode/
+*.suo
+*.user
+
+# Log files #
+#############
+*.log
+
+# Temporary files #
+###################
+*.tmp
+*.swp
