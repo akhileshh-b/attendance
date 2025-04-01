@@ -1,12 +1,15 @@
 import axios from 'axios';
 
+// Make sure this environment variable is properly set in Vercel
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+console.log('Using API URL:', API_URL); // Add this for debugging
 
 const api = axios.create({
   baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: false, // Add this to handle CORS issues
 });
 
 // Add token to requests if it exists
@@ -36,4 +39,4 @@ export const getSubjects = () => api.get('/subjects');
 export const addSubject = (subject) => api.post('/subjects', { subject });
 export const deleteSubject = (subject) => api.delete(`/subjects/${subject}`);
 
-export default api; 
+export default api;
